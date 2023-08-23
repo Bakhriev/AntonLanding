@@ -572,23 +572,109 @@ body {
 			display: none;
 		}
 	}
-
-	// .column__text
-
-	&__text {
-	}
-
-	// .column__title
-
-	&__title {
-	}
-
-	// .column__info
-
-	&__info {
-	}
 }
 
 .no-fixed {
 	max-width: 100% !important;
+}
+
+// FAQ
+
+.faq {
+	margin-top: 70px;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 26px;
+	}
+}
+
+.accordion-toggle:focus-visible {
+	outline: 2px solid #fff;
+}
+
+.accordions-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.accordion {
+	position: relative;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	box-shadow: 0px 0px 12px 0px rgba(34, 60, 80, 0.14);
+}
+
+.accordion-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	width: 100%;
+
+	border-radius: 5px;
+	padding: 5px;
+	outline-offset: 2px;
+}
+
+.accordion-toggle:active {
+	outline-offset: 1px;
+}
+
+.accordion-toggle.opened > svg {
+	transform: rotate(90deg);
+}
+
+.accordion-wrapper {
+	height: 0;
+	padding: 0 20px;
+	overflow: hidden;
+
+	transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-title {
+	color: #000;
+	padding-left: 20px;
+	font-family: Montserrat;
+	font-size: 25.845px;
+	font-weight: 500;
+	line-height: 30px;
+	letter-spacing: -0.126px;
+}
+
+.accordion-arrow {
+	stroke: #000;
+	transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content {
+	margin: 10px 0;
+}
+
+.accordion-text {
+	max-width: 1000px;
+
+	color: #000;
+	font-family: Inter;
+	font-size: 17.546px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.text-bold {
+	color: #000;
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.accord-link {
+	color: #1e70d7;
+	font-family: Inter;
+	font-size: 20px;
+	font-weight: 400;
+	text-decoration: underline;
 }

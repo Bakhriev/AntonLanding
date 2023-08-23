@@ -112,3 +112,4 @@ const resetHandleBars = () => {
 		checkbox.checked = false
 	})
 }
+
