@@ -59,3 +59,56 @@ const dropdownInit = () => {
 }
 
 dropdownInit()
+
+const select = document.querySelector('.select')
+const selectItems = document.querySelectorAll('.select-item')
+const selected = document.querySelector('.select-text')
+
+select.addEventListener('click', () => {
+	select.classList.toggle('active')
+})
+selectItems.forEach(item => {
+	item.addEventListener('click', () => {
+		selected.textContent = item.textContent
+	})
+})
+
+const wheels = document
+	.querySelector('[data-wheel]')
+	.querySelectorAll('.form__field')
+
+const resetWheels = () => {
+	wheels.forEach(checkbox => {
+		checkbox.checked = false
+	})
+}
+
+const wheelSelects = document.querySelectorAll('.form__select-secondary')
+
+wheelSelects.forEach(sel => {
+	sel.addEventListener('click', () => {
+		resetWheels()
+		sel.previousElementSibling.checked = true
+	})
+})
+
+// Handle
+
+const handleBars = document
+	.querySelector('[data-handlebar]')
+	.querySelectorAll('.form__field')
+
+const handleBarsSelect = document.querySelectorAll('.form__select-primary')
+
+handleBarsSelect.forEach(sel => {
+	sel.addEventListener('click', () => {
+		resetHandleBars()
+		sel.previousElementSibling.checked = true
+	})
+})
+
+const resetHandleBars = () => {
+	handleBars.forEach(checkbox => {
+		checkbox.checked = false
+	})
+}
