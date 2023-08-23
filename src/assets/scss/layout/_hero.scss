@@ -7,10 +7,14 @@
 	}
 
 	&__inner {
-		display: grid;
-		gap: 200px;
-		grid-template-columns: repeat(2, 1fr);
 		position: relative;
+
+		display: flex;
+		justify-content: space-between;
+
+		// display: grid;
+		// gap: 200px;
+		// grid-template-columns: repeat(2, 1fr);
 
 		padding-top: 150px;
 		padding-bottom: 150px;
@@ -120,6 +124,8 @@
 	// .hero__right
 
 	&__right {
+		flex-shrink: 0;
+		padding-right: 190px;
 		padding-top: 20px;
 		position: relative;
 		z-index: 1;
@@ -141,7 +147,7 @@
 	border-radius: 8px;
 	background-color: #fbfbfa;
 	max-width: 610px;
-	width: 1000%;
+	width: 100%;
 
 	&::before {
 		content: '';
@@ -290,26 +296,94 @@
 	// .form__bottom
 
 	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	// .form__price
 
 	&__price {
+		display: flex;
+		flex-direction: column;
 	}
 
 	// .form__price-price
 
 	&__price-price {
+		color: #191919;
+		font-family: Montserrat;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 24.857px; /* 112.988% */
+		letter-spacing: -0.262px;
 	}
 
 	// .form__price-desc
 
 	&__price-desc {
+		color: #686868;
+		font-family: HelveticaNeueCyr;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 550;
+		line-height: 104%; /* 16.64px */
+		letter-spacing: -0.32px;
 	}
 
 	// .form__btn
 
 	&__btn {
+		position: relative;
+		color: #216d39;
+		text-shadow: 0px 2px 0px rgba(255, 255, 255, 0.3);
+		max-width: 294px;
+		width: 100%;
+		min-height: 88px;
+		display: grid;
+		place-items: center;
+		border-radius: 68px;
+		background: #76e48d;
+		font-size: 23px;
+		font-weight: 400;
+		box-shadow: 0px 11px 19px -1px rgba(34, 60, 80, 0.5);
+		&:active {
+			scale: 0.98;
+			&::before {
+				display: none;
+			}
+			&::after {
+				display: none;
+			}
+		}
+
+		border: 2px solid rgba(204, 245, 212, 0.7);
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			background-color: #69c77d;
+			opacity: 1;
+			top: 5px;
+
+			border-radius: 68px;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			background-color: #69c97d;
+			opacity: 1;
+			top: 5px;
+
+			border-radius: 68px;
+		}
 	}
 }
 
@@ -388,4 +462,8 @@
 		line-height: 1;
 		letter-spacing: -0.262px;
 	}
+}
+
+.price-text {
+	color: #69c77d;
 }
