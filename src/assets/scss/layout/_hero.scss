@@ -171,6 +171,15 @@
 			min-height: 70px;
 			font-size: 20px;
 		}
+
+		&:active {
+			scale: 0.97;
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+
 		&::before,
 		&::after {
 			content: '';
@@ -478,7 +487,6 @@
 
 .select {
 	position: relative;
-	max-width: 250px;
 	min-width: 233px;
 	width: 100%;
 }
