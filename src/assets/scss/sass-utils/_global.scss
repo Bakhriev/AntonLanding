@@ -28,7 +28,7 @@ body {
 }
 
 .disable-vertical-scroll {
-	overflow-y: hidden;
+	overflow: hidden !important;
 }
 
 .flex-column {
