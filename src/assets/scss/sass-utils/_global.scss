@@ -65,3 +65,43 @@ body {
 		left: -51px;
 	}
 }
+
+.parent-border {
+	position: relative;
+	overflow: visible;
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		width: 60px;
+		height: 60px;
+		transform: rotate(45deg);
+		overflow: hidden;
+		border-radius: 1px;
+		background-color: #f7f7f7;
+		border: 1px solid #c9c9c9;
+		border-left-color: rgba(247, 247, 247, 1);
+		border-bottom-color: rgba(247, 247, 247, 1);
+		top: 43px;
+		left: -31px;
+		border-top-right-radius: 10px;
+	}
+}
+
+.child-border {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: 0;
+		width: 67px;
+		height: 60px;
+		transform: rotate(45deg);
+		overflow: hidden;
+		border-radius: 1px;
+		background-color: #f7f7f7;
+		top: 29px;
+		left: -35px;
+		border-top-right-radius: 10px;
+	}
+}
