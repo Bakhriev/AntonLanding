@@ -3,24 +3,6 @@ body {
 	padding-bottom: 100px;
 }
 
-.rhombus-card {
-	position: relative;
-	&::before {
-		content: '';
-		position: absolute;
-		z-index: 0;
-		width: 70px;
-		height: 70px;
-		transform: rotate(45deg);
-		overflow: hidden;
-		border-radius: 8px;
-		background-color: rgba(247, 247, 247, 1);
-
-		top: 43px;
-		left: -51px;
-	}
-}
-
 .steps {
 	// .steps__container
 
@@ -180,10 +162,42 @@ body {
 	border-radius: 10px;
 	background-color: rgba(247, 247, 247, 1);
 	border: 1px solid #c9c9c9;
-	overflow: hidden;
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		width: 60px;
+		height: 60px;
+		transform: rotate(45deg);
+		overflow: hidden;
+		border-radius: 1px;
+		background-color: #f7f7f7;
+		border: 1px solid #c9c9c9;
+		border-left-color: rgba(247, 247, 247, 1);
+		border-bottom-color: rgba(247, 247, 247, 1);
+		top: 43px;
+		left: -31px;
+		border-top-right-radius: 10px;
+	}
 
 	&__inner {
+		position: relative;
 		padding: 56px 60px 60px 80px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: 0;
+			width: 67px;
+			height: 60px;
+			transform: rotate(45deg);
+			overflow: hidden;
+			border-radius: 1px;
+			background-color: #f7f7f7;
+			top: 29px;
+			left: -35px;
+			border-top-right-radius: 10px;
+		}
 
 		@media screen and (max-width: $tablet) {
 			padding: 20px;
@@ -515,6 +529,7 @@ body {
 	max-width: 400px;
 }
 .large-cards {
+	margin-top: 50px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
