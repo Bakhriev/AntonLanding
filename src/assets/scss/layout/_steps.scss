@@ -199,6 +199,7 @@ body {
 		}
 		@media screen and (max-width: $tablet) {
 			padding-left: 25px;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -623,6 +624,9 @@ body {
 		margin-left: auto;
 		display: flex;
 		img {
+			@media screen and (max-width: $tablet) {
+				display: none;
+			}
 			width: 14px;
 			height: 14px;
 			object-fit: cover;
@@ -632,6 +636,9 @@ body {
 	&__icon {
 		width: 80px;
 		position: relative;
+		@media screen and (max-width: $tablet) {
+			width: 40px;
+		}
 		&::before {
 			content: '';
 			width: 1px;
@@ -659,6 +666,9 @@ body {
 }
 .question {
 	margin-left: 10px;
+	@media screen and (max-width: $tablet) {
+		display: none;
+	}
 }
 
 .accordion-toggle.opened > svg {
@@ -676,8 +686,12 @@ body {
 
 .accordion-wrapper {
 	height: 0;
-	padding: 0 55px;
 	overflow: hidden;
+	padding-left: 55px;
+	padding-right: 88px;
+	@media screen and (max-width: $tablet) {
+		padding-left: 18px;
+	}
 
 	transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -686,10 +700,14 @@ body {
 	color: #000;
 	padding-left: 20px;
 	font-family: Montserrat;
-	font-size: 25.845px;
+	font-size: 26px;
 	font-weight: 500;
 	line-height: 30px;
 	letter-spacing: -0.126px;
+	@media screen and (max-width: $tablet) {
+		font-size: 20px;
+		padding-left: 10px;
+	}
 }
 
 .accordion-arrow {
